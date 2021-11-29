@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Ionic App</title>
+
+  <base href="/" />
+
+  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <script type="module">
+    import { loadingController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.loadingController = loadingController;
+  </script>
+  <script>
+    async function MuestraMensajeCarga() {
+      const loading = await loadingController.create({
+        message: 'Espere un momento,Tomate un cafe mientras esperas el auto...',
+        duration: 3000
+      });
+
+      await loading.present();
+      const { role, data } = await loading.onDidDismiss();
+      window.location.href="/bienvenido";
+    }
+    async function MuestraMensajeCarga2() {
+      const loading = await loadingController.create({
+        message: 'Sera redireccionado con su cuenta ingresada',
+        duration: 3000
+      });
+
+      await loading.present();
+      const { role, data } = await loading.onDidDismiss();
+      window.location.href="/bienvenido";
+    }
+    async function MuestraMensajeCarga3() {
+      const loading = await loadingController.create({
+        message: 'Gracias por usar TellevoApp',
+        duration: 1000
+      });
+
+      await loading.present();
+      const { role, data } = await loading.onDidDismiss();
+      window.location.href="/salir";
+    }
+    async function MuestraMensajeCarga4() {
+      const loading = await loadingController.create({
+        message: 'espere mientras enviamos su codigo',
+        duration: 2000
+      });
+
+      await loading.present();
+      const { role, data } = await loading.onDidDismiss();
+      window.location.href="/valrecuperar";
+    }
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+  
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recuperar Contraseña </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-item lines="full">
+          <ion-label position="floating"><ion-icon name="mail-open-outline"></ion-icon>   Ingrese su correo...</ion-label>
+          <ion-input type="text" required></ion-input>
+    
+        </ion-item>
+    
+        
+    
+          <ion-row>
+          <ion-col>
+            <ion-button type="submit" onclick="MuestraMensajeCarga4();" color="secondary" expand="block">Aceptar</ion-button>
+            
+            <ion-button type="submit" routerLink="/login" color="danger" expand="block">Volver</ion-button>
+          </ion-col>
+        </ion-row>
+    
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="success">
+  </ion-toolbar>
+ 
